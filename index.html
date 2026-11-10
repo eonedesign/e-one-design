@@ -197,26 +197,51 @@ footer{background:#0d0f10}
 .service-gallery-empty strong{display:block;font-size:20px;color:#e7e7e7;margin-bottom:5px}
 .service-dialog .service-cta{margin-top:10px}
 body.service-modal-open{overflow:hidden}
+
+/* Service navigation and on-site inquiry forms */
+.service-switcher{display:flex;align-items:center;gap:14px;margin-bottom:22px;color:#bfc1c3;font-size:13px;font-weight:700}
+.service-switcher button{border:1px solid #6a6e70;background:#242729;color:white;width:43px;height:43px;border-radius:50%;font-size:24px;cursor:pointer;transition:background .2s}
+.service-switcher button:hover,.service-switcher button:focus-visible{background:#EC6E00}
+.service-switcher span{min-width:54px;text-align:center}
+.inquiry-panel{margin-top:25px;padding-top:24px;border-top:1px solid #575b5d}
+.inquiry-panel h3,.contact-form-wrap h3{font-size:23px;margin:0 0 19px}
+.inquiry-form{display:grid;gap:14px;width:100%}
+.inquiry-form label{display:grid;gap:7px;font-size:13px;font-weight:650;color:#d7d9da}
+.inquiry-form input:not([type="checkbox"]),.inquiry-form textarea,.inquiry-form select{width:100%;box-sizing:border-box;border:1px solid #5b6063;background:#15191b;border-radius:8px;padding:13px 14px;font:inherit;font-size:15px;color:white;outline:none}
+.inquiry-form input:focus,.inquiry-form textarea:focus,.inquiry-form select:focus{border-color:#EC6E00;box-shadow:0 0 0 2px #ec6e002c}
+.inquiry-form textarea{resize:vertical;min-height:110px}
+.inquiry-form .form-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.inquiry-form .form-consent{display:flex;align-items:flex-start;gap:9px;font-size:12px;font-weight:400;line-height:1.5}
+.inquiry-form .form-consent input{margin-top:3px;accent-color:#EC6E00}
+.form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.form-actions button:disabled{opacity:.55;cursor:wait}
+.form-status{font-size:13px;line-height:1.5;max-width:440px;color:#f4bb7e}
+.contact-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1.2fr);gap:30px}
+.contact-form-wrap{width:100%}
+.service-dialog{scrollbar-color:#ec6e00 #222}
+@media(max-width:800px){.contact-box{grid-template-columns:1fr}.inquiry-form .form-two{grid-template-columns:1fr}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="#pocetna"><img src="images/eone-logo.svg" alt="E-ONE Design & Branding"></a><nav class="links"><a href="#pocetna">Početna</a><a href="#usluge">Usluge</a><a href="#portfolio">Portfolio</a><a href="#onama">O nama</a><a href="#kontakt">Kontakt</a></nav><div class="social-links"><a href="#kontakt" aria-label="Instagram">◎</a><a href="#kontakt" aria-label="Facebook">f</a><a href="#portfolio" aria-label="YouTube">▶</a><a href="#portfolio" aria-label="Behance">Bē</a><span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span></div></div></header>
 <section class="hero" id="pocetna"><div class="wrap hero-content"><div class="eyebrow"><span class="eyebrow-line"></span> KREATIVNI STUDIO · DESIGN & BRANDING</div><h1 id="heroTitle"></h1><p id="heroSubtitle"></p><div class="actions"><a class="btn" href="#usluge">Pogledajte usluge →</a><a class="btn ghost" href="#portfolio">▶ &nbsp; Naš portfolio</a></div><div class="hero-bottom"><span>IDENTITET / PRINT / DIGITAL / WRAPPING</span><span>SCROLL TO EXPLORE ↓</span></div></div><div class="hero-art" aria-hidden="true"><span class="hero-ring"></span><span class="hero-monogram">E</span><span class="hero-art-caption">DESIGN<br>WITH IMPACT<span class="orange-dot">.</span></span><div class="studio-scene"><div class="lamp"></div><div class="monitor"><div class="monitor-screen"><span>E-ONE<small>DESIGN &amp; BRANDING</small></span></div></div><div class="monitor-base"></div><div class="tablet">E</div></div></div></section>
 <section class="section" id="usluge"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Šta radimo</div><h2>Naše usluge</h2></div><p>Od prve ideje do završne realizacije.</p></div><div class="grid" id="services"></div></div></section>
-<div class="service-overlay" id="serviceOverlay" hidden><section class="service-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceDialogTitle" tabindex="-1"><button type="button" class="service-close" id="serviceClose" aria-label="Zatvori detalje">×</button><div class="service-kicker">E-ONE · NAŠE USLUGE</div><h2 id="serviceDialogTitle"></h2><p class="service-lead" id="serviceDialogLead"></p><p class="service-description" id="serviceDialogDescription"></p><div class="service-gallery" id="serviceDialogGallery"></div><a href="#kontakt" class="btn service-cta" id="serviceDialogContact">Pošaljite upit za ovu uslugu →</a></section></div>
+<div class="service-overlay" id="serviceOverlay" hidden><section class="service-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceDialogTitle" tabindex="-1"><button type="button" class="service-close" id="serviceClose" aria-label="Zatvori detalje">×</button><div class="service-switcher"><button type="button" id="servicePrev" aria-label="Prethodna usluga">←</button><span id="serviceCounter"></span><button type="button" id="serviceNext" aria-label="Sledeća usluga">→</button></div><div class="service-kicker">E-ONE · NAŠE USLUGE</div><h2 id="serviceDialogTitle"></h2><p class="service-lead" id="serviceDialogLead"></p><p class="service-description" id="serviceDialogDescription"></p><div class="service-gallery" id="serviceDialogGallery"></div><div class="inquiry-panel"><h3>Pošaljite upit za ovu uslugu</h3><form class="inquiry-form" id="serviceInquiry" novalidate><input type="hidden" name="_subject" value=""><label>Vrsta usluge<select name="category" required></select></label><div class="form-two"><label>Ime i prezime<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Vaše ime"></label><label>E-mail adresa<input name="email" type="email" autocomplete="email" required placeholder="vas@email.com"></label></div><label>Telefon (opciono)<input name="phone" type="tel" autocomplete="tel" placeholder="+381..."></label><label>Poruka<textarea name="message" required rows="4" maxlength="5000" placeholder="Opišite šta vam je potrebno..."></textarea></label><label class="form-consent"><input type="checkbox" required name="consent" value="Da"> Saglasan/saglasna sam da se podaci koriste isključivo za odgovor na moj upit.</label><div class="form-actions"><button type="submit" class="btn">Pošaljite upit →</button><span class="form-status" role="status" aria-live="polite"></span></div></form></div></section></div>
 <section class="section" id="portfolio"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Naš rad</div><h2>Izabrani radovi</h2></div><p>Svaki projekat je priča za sebe.</p></div><div class="filterbar" id="filters"></div><div class="portfolio" id="projects"></div><p class="portfolio-note">Portfolio je spreman za tvoje originalne fotografije — dodaju se kroz administraciju.</p></div></section>
 <section class="section about" id="onama"><div class="wrap about-cols"><div><div class="eyebrow">O nama</div><h2>Od prve skice do <span class="accent">prepoznatljivog brenda.</span></h2><p id="aboutText"></p></div><div><div class="feature">Kreativan i individualan pristup</div><div class="feature">Vizuelni identitet i brendiranje</div><div class="feature">Priprema za profesionalnu štampu</div><div class="feature">Dizajn za digitalne i štampane medije</div><div class="feature">Od ideje do realizacije</div></div></div></section>
-<section class="section contact" id="kontakt"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Hajde da sarađujemo</div><h2>Imate ideju?<br><span class="accent">Dajmo joj oblik.</span></h2><p>Pišite nam ili nas pozovite za ponudu.</p><div id="contactDetails"></div></div><a class="btn" id="emailButton">Pošaljite upit ↗</a></div></div></section><footer><div class="wrap foot"><span>© <span id="year"></span> E-ONE Design & Branding</span><span>Grafički dizajn • Brendiranje • Auto grafika</span></div></footer>
+<section class="section contact" id="kontakt"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Hajde da sarađujemo</div><h2>Imate ideju?<br><span class="accent">Dajmo joj oblik.</span></h2><p>Pišite nam ili nas pozovite za ponudu.</p><div id="contactDetails"></div></div><div class="contact-form-wrap"><h3>Pošaljite nam upit</h3><form class="inquiry-form" id="generalInquiry" novalidate><input type="hidden" name="_subject" value=""><label>Vrsta usluge<select name="category" required></select></label><div class="form-two"><label>Ime i prezime<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Vaše ime"></label><label>E-mail adresa<input name="email" type="email" autocomplete="email" required placeholder="vas@email.com"></label></div><label>Telefon (opciono)<input name="phone" type="tel" autocomplete="tel" placeholder="+381..."></label><label>Poruka<textarea name="message" required rows="4" maxlength="5000" placeholder="Opišite šta vam je potrebno..."></textarea></label><label class="form-consent"><input type="checkbox" required name="consent" value="Da"> Saglasan/saglasna sam da se podaci koriste isključivo za odgovor na moj upit.</label><div class="form-actions"><button type="submit" class="btn">Pošaljite upit →</button><span class="form-status" role="status" aria-live="polite"></span></div></form></div></div></div></section><footer><div class="wrap foot"><span>© <span id="year"></span> E-ONE Design & Branding</span><span>Grafički dizajn • Brendiranje • Auto grafika</span></div></footer>
 
 <script>
 const SERVICES=[['✦','Grafički dizajn','Kreativna vizuelna rešenja'],['◈','Dizajn logotipa','Originalan identitet brenda'],['⬡','Brendiranje','Kompletan vizuelni identitet'],['▣','Vizitkarte i flajeri','Dizajn i priprema za štampu'],['▤','Plakati i bilbordi','Efektne reklamne poruke'],['◎','Društvene mreže','Objave i digitalne kampanje'],['▱','Auto grafika','Car wrapping i folije'],['♢','Etikete i pakovanja','Dizajn proizvoda i ambalaže'],['▥','Katalozi i brošure','Profesionalne publikacije'],['◉','Reklamni materijal','Baneri, nalepnice i promo']];
-let data={hero:'Kreativna rešenja za vaš brend.',subtitle:'Grafički dizajn i brendiranje',about:'E-ONE Design & Branding',phone:'',email:'',instagram:'',projects:[]},active='Sve';const $=id=>document.getElementById(id);function safe(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function render(){ $('heroTitle').textContent=data.hero;$('heroSubtitle').textContent=data.subtitle;$('aboutText').textContent=data.about;$('services').innerHTML=SERVICES.map((s,i)=>`<article class="service" role="button" tabindex="0" data-service="${i}" aria-label="Detalji usluge: ${safe(s[1])}"><div class="sym">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></article>`).join('');const cats=['Sve',...new Set(data.projects.map(p=>p.category).filter(Boolean))];if(!cats.includes(active))active='Sve';$('filters').innerHTML=cats.map(c=>`<button class="${c===active?'active':''}" data-cat="${safe(c)}">${safe(c)}</button>`).join('');$('filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.cat;render()});$('projects').innerHTML=data.projects.filter(p=>active==='Sve'||p.category===active).map(p=>`<article class="project">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.title)}">`:'<div class="placeholder">E-ONE</div>'}<div class="project-info"><h3>${safe(p.title)}</h3><p>${safe(p.category)}</p></div></article>`).join('');let bits=[];if(data.phone)bits.push(`<p>☎ <a href="tel:${safe(data.phone.replace(/[^+\d]/g,''))}">${safe(data.phone)}</a></p>`);if(data.email)bits.push(`<p>✉ <a href="mailto:${safe(data.email)}">${safe(data.email)}</a></p>`);if(data.instagram&&/^https:\/\//i.test(data.instagram))bits.push(`<p>◎ <a target="_blank" rel="noopener" href="${safe(data.instagram)}">Instagram</a></p>`);$('contactDetails').innerHTML=bits.join('')||'<p>Dodajte kontakt podatke u administraciji sajta.</p>';$('emailButton').href=data.email?'mailto:'+data.email:'#kontakt';$('emailButton').style.display=data.email?'inline-flex':'none';$('year').textContent=new Date().getFullYear()}
+let data={hero:'Kreativna rešenja za vaš brend.',subtitle:'Grafički dizajn i brendiranje',about:'E-ONE Design & Branding',phone:'',email:'',instagram:'',projects:[]},active='Sve';const $=id=>document.getElementById(id);function safe(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function render(){ $('heroTitle').textContent=data.hero;$('heroSubtitle').textContent=data.subtitle;$('aboutText').textContent=data.about;$('services').innerHTML=SERVICES.map((s,i)=>`<article class="service" role="button" tabindex="0" data-service="${i}" aria-label="Detalji usluge: ${safe(s[1])}"><div class="sym">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></article>`).join('');const cats=['Sve',...new Set(data.projects.map(p=>p.category).filter(Boolean))];if(!cats.includes(active))active='Sve';$('filters').innerHTML=cats.map(c=>`<button class="${c===active?'active':''}" data-cat="${safe(c)}">${safe(c)}</button>`).join('');$('filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{active=b.dataset.cat;render()});$('projects').innerHTML=data.projects.filter(p=>active==='Sve'||p.category===active).map(p=>`<article class="project">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.title)}">`:'<div class="placeholder">E-ONE</div>'}<div class="project-info"><h3>${safe(p.title)}</h3><p>${safe(p.category)}</p></div></article>`).join('');let bits=[];if(data.phone)bits.push(`<p>☎ <a href="tel:${safe(data.phone.replace(/[^+\d]/g,''))}">${safe(data.phone)}</a></p>`);if(data.email)bits.push(`<p>✉ <a href="mailto:${safe(data.email)}">${safe(data.email)}</a></p>`);if(data.instagram&&/^https:\/\//i.test(data.instagram))bits.push(`<p>◎ <a target="_blank" rel="noopener" href="${safe(data.instagram)}">Instagram</a></p>`);$('contactDetails').innerHTML=bits.join('')||'<p>Dodajte kontakt podatke u administraciji sajta.</p>';$('year').textContent=new Date().getFullYear()}
 fetch('./content/site.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Podaci nisu dostupni');return r.json()}).then(d=>{data=d;render()}).catch(()=>render());
 
 let serviceDetails=[];
 let previousServiceFocus=null;
+let currentServiceIndex=0;
 function openService(index){
  const base=SERVICES[index];if(!base)return;
  const detail=serviceDetails.find(x=>x.id==='service-'+(index+1))||{};
- previousServiceFocus=document.activeElement;
+ if($('serviceOverlay').hidden)previousServiceFocus=document.activeElement;
+ currentServiceIndex=index;
  $('serviceDialogTitle').textContent=detail.title||base[1];
  $('serviceDialogLead').textContent=detail.subtitle||base[2];
  $('serviceDialogDescription').textContent=detail.description||base[2];
@@ -227,10 +252,9 @@ function openService(index){
  }else{
    const empty=document.createElement('div');empty.className='service-gallery-empty';empty.innerHTML='<strong>Galerija radova</strong>Fotografije ove usluge uskoro. Dodajte ih kroz Pages CMS.';gallery.appendChild(empty);
  }
- const mail=(data.email||'').trim();
- const cta=$('serviceDialogContact');
- cta.textContent=mail?'Pošaljite upit za ovu uslugu →':'Kontaktirajte nas →';
- cta.href=mail?'mailto:'+encodeURIComponent(mail)+'?subject='+encodeURIComponent('Upit — '+(detail.title||base[1])):'#kontakt';
+ $('serviceCounter').textContent=(index+1)+' / '+SERVICES.length;
+ setFormCategory($('serviceInquiry'),detail.title||base[1]);
+ $('serviceInquiry').querySelector('.form-status').textContent='';
  $('serviceOverlay').hidden=false;document.body.classList.add('service-modal-open');
  $('serviceClose').focus();
 }
@@ -239,7 +263,41 @@ $('services').addEventListener('click',e=>{const el=e.target.closest('[data-serv
 $('services').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-service]')){e.preventDefault();openService(Number(e.target.dataset.service))}});
 $('serviceClose').addEventListener('click',closeService);
 $('serviceOverlay').addEventListener('click',e=>{if(e.target===$('serviceOverlay'))closeService()});
-$('serviceDialogContact').addEventListener('click',e=>{if(e.currentTarget.getAttribute('href')==='#kontakt')closeService()});
-document.addEventListener('keydown',e=>{if($('serviceOverlay').hidden)return;if(e.key==='Escape')closeService();if(e.key==='Tab'){const dialog=$('serviceOverlay').querySelector('.service-dialog');const links=[...dialog.querySelectorAll('button,a[href]')].filter(el=>el.offsetParent!==null);if(!links.length)return;const first=links[0],last=links[links.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+$('servicePrev').addEventListener('click',()=>openService((currentServiceIndex-1+SERVICES.length)%SERVICES.length));
+$('serviceNext').addEventListener('click',()=>openService((currentServiceIndex+1)%SERVICES.length));
+document.addEventListener('keydown',e=>{if($('serviceOverlay').hidden)return;if(e.key==='Escape')closeService();if(e.key==='ArrowLeft'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();openService((currentServiceIndex-1+SERVICES.length)%SERVICES.length)}if(e.key==='ArrowRight'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();openService((currentServiceIndex+1)%SERVICES.length)}if(e.key==='Tab'){const dialog=$('serviceOverlay').querySelector('.service-dialog');const links=[...dialog.querySelectorAll('button,a[href],input,select,textarea')].filter(el=>el.offsetParent!==null);if(!links.length)return;const first=links[0],last=links[links.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+
+const inquiryCategories=['Opšti upit',...SERVICES.map(x=>x[1])];
+function setFormCategory(form,category){
+ const select=form.querySelector('[name="category"]');
+ if(!select.options.length)inquiryCategories.forEach(label=>{const o=document.createElement('option');o.value=label;o.textContent=label;select.appendChild(o)});
+ select.value=inquiryCategories.includes(category)?category:'Opšti upit';
+ form.querySelector('[name="_subject"]').value='E-ONE upit — '+select.value;
+}
+function initInquiryForm(id,category){
+ const form=$(id);setFormCategory(form,category);
+ form.querySelector('[name="category"]').addEventListener('change',()=>setFormCategory(form,form.querySelector('[name="category"]').value));
+ form.addEventListener('submit',async e=>{
+  e.preventDefault();const status=form.querySelector('.form-status');
+  if(!form.reportValidity())return;
+  const destination=(data.email||'').trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(destination)){status.textContent='Slanje trenutno nije dostupno. Pokušajte ponovo kasnije.';return}
+  const btn=form.querySelector('button[type="submit"]');btn.disabled=true;status.textContent='Šaljemo upit...';
+  try{
+   const fd=new FormData(form);fd.delete('consent');
+   fd.set('_subject','E-ONE upit — '+fd.get('category'));
+   fd.set('_captcha','true');fd.set('_template','table');
+   const res=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(destination),{method:'POST',body:fd,headers:{Accept:'application/json'}});
+   const result=await res.json();
+   if(!res.ok||result.success===false||result.success==='false')throw Error('Service error');
+   status.textContent='Upit je prosleđen servisu. Ako je adresa tek aktivirana, potrebno je potvrditi e-mail za prijem poruka.';
+   const chosen=form.querySelector('[name="category"]').value;form.reset();setFormCategory(form,chosen);
+  }catch(err){status.textContent='Upit nije poslat. Pokušajte ponovo ili nas kontaktirajte telefonom.'}
+  finally{btn.disabled=false}
+ });
+}
+initInquiryForm('generalInquiry','Opšti upit');
+initInquiryForm('serviceInquiry','Grafički dizajn');
+
 fetch('./content/services.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Nema podataka');return r.json()}).then(d=>{serviceDetails=Array.isArray(d.items)?d.items:[]}).catch(()=>{});
 </script></body></html>
