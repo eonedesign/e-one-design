@@ -50,21 +50,25 @@ content:
     path: content/services.json
     format: json
     fields:
-      - name: id
-        label: ID usluge
-        type: string
-        hidden: true
-      - name: title
-        label: Naziv usluge
-        type: string
-      - name: subtitle
-        label: Kratak opis
-        type: string
-      - name: description
-        label: Detaljan opis
-        type: text
-      - name: images
-        label: Fotografije usluge
-        type: image
+      - name: items
+        label: Usluge i galerije
+        type: object
         list: true
-        required: false
+        fields:
+          - name: id
+            label: ID usluge (ne menjati)
+            type: string
+          - name: title
+            label: Naziv usluge
+            type: string
+          - name: subtitle
+            label: Kratak opis
+            type: string
+          - name: description
+            label: Detaljan opis
+            type: text
+          - name: images
+            label: Fotografije usluge
+            type: image
+            list: true
+            required: false
