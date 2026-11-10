@@ -2,39 +2,32 @@
   "hero": "Kreativna rešenja za vaš brend.",
   "subtitle": "Grafički dizajn • Logotipi • Brendiranje • Štampa • Auto grafika • Etikete i ambalaža",
   "about": "E-ONE Design & Branding kreira originalna vizuelna rešenja za kompanije, proizvode i pojedince. Od logotipa i vizitkarti do kompletnog brendiranja vozila, ambalaže i digitalnih kampanja.",
-  "phone": "",
-  "email": "",
-  "instagram": "",
+  "phone": "+381612972473",
+  "email": "eonedesign4all@gmail.com",
   "projects": [
     {
       "title": "Vizuelni identitet",
-      "category": "Logotipi",
-      "image": ""
+      "category": "Logotipi"
     },
     {
       "title": "Vizitkarte i štampa",
-      "category": "Štampa",
-      "image": ""
+      "category": "Štampa"
     },
     {
       "title": "Plakati i promocija",
-      "category": "Štampa",
-      "image": ""
+      "category": "Štampa"
     },
     {
       "title": "Car wrapping",
-      "category": "Auto grafika",
-      "image": ""
+      "category": "Auto grafika"
     },
     {
       "title": "Etikete i pakovanja",
-      "category": "Ambalaža",
-      "image": ""
+      "category": "Ambalaža"
     },
     {
       "title": "Katalozi i brošure",
-      "category": "Štampa",
-      "image": ""
+      "category": "Štampa"
     }
   ]
 }
