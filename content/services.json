@@ -1,0 +1,72 @@
+[
+  {
+    "id": "service-1",
+    "title": "Grafički dizajn",
+    "subtitle": "Kreativna vizuelna rešenja",
+    "description": "Osmišljavamo grafička rešenja koja jasno predstavljaju vašu ideju i privlače pažnju. Od promotivnih materijala do složenih vizuelnih kampanja, svaki detalj prilagođavamo vašem brendu.",
+    "images": []
+  },
+  {
+    "id": "service-2",
+    "title": "Dizajn logotipa",
+    "subtitle": "Originalan identitet brenda",
+    "description": "Kreiramo prepoznatljive logotipe koji funkcionišu u svim formatima — na ekranu, štampi, vozilima i ambalaži. Posebnu pažnju posvećujemo čitljivosti, proporcijama i primeni znaka.",
+    "images": []
+  },
+  {
+    "id": "service-3",
+    "title": "Brendiranje",
+    "subtitle": "Kompletan vizuelni identitet",
+    "description": "Gradimo dosledan vizuelni identitet: logotip, boje, tipografiju, grafičke elemente i smernice za primenu. Cilj je da brend bude prepoznatljiv na svakom mestu gde se pojavljuje.",
+    "images": []
+  },
+  {
+    "id": "service-4",
+    "title": "Vizitkarte i flajeri",
+    "subtitle": "Dizajn i priprema za štampu",
+    "description": "Dizajniramo vizitkarte, flajere, memorandume i ostale poslovne materijale. Pripremamo fajlove za profesionalnu štampu, uz pažnju prema bojama, formatima i završnoj obradi.",
+    "images": []
+  },
+  {
+    "id": "service-5",
+    "title": "Plakati i bilbordi",
+    "subtitle": "Efektne reklamne poruke",
+    "description": "Kreiramo plakate, postere, bilborde i druge formate velikih dimenzija. Kombinujemo upečatljivu kompoziciju i jasnu poruku koja se lako uočava i čita.",
+    "images": []
+  },
+  {
+    "id": "service-6",
+    "title": "Društvene mreže",
+    "subtitle": "Objave i digitalne kampanje",
+    "description": "Oblikujemo vizuale za objave, priče, naslovne fotografije i digitalne kampanje. Svaki dizajn prilagođavamo formatu platforme i identitetu brenda.",
+    "images": []
+  },
+  {
+    "id": "service-7",
+    "title": "Auto grafika",
+    "subtitle": "Car wrapping i folije",
+    "description": "Projektujemo grafiku za automobile, kombije i druga vozila — od diskretnih oznaka do kompletnog oblepljivanja. Dizajn prilagođavamo linijama vozila i zahtevima štampe i montaže.",
+    "images": []
+  },
+  {
+    "id": "service-8",
+    "title": "Etikete i pakovanja",
+    "subtitle": "Dizajn proizvoda i ambalaže",
+    "description": "Dizajniramo etikete, kutije, omote i kompletnu ambalažu proizvoda. Povezujemo vizuelnu privlačnost, informacije o proizvodu i tehničke zahteve proizvodnje.",
+    "images": []
+  },
+  {
+    "id": "service-9",
+    "title": "Katalozi i brošure",
+    "subtitle": "Profesionalne publikacije",
+    "description": "Oblikujemo kataloge, brošure, prezentacije proizvoda i promotivne publikacije. Organizujemo tekstove i fotografije u pregledan, elegantan raspored spreman za štampu ili digitalnu distribuciju.",
+    "images": []
+  },
+  {
+    "id": "service-10",
+    "title": "Reklamni materijal",
+    "subtitle": "Baneri, nalepnice i promo",
+    "description": "Pripremamo grafiku za banere, nalepnice, izloge, reklamne table i promotivne proizvode. Dizajn usklađujemo sa podlogom, dimenzijama i tehnologijom izrade.",
+    "images": []
+  }
+]
