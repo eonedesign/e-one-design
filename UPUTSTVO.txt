@@ -1,0 +1,18 @@
+E-ONE DESIGN & BRANDING — SAJT SA ONLINE UREDJIVANJEM
+
+1. Registrujte besplatan nalog na github.com.
+2. Napravite PUBLIC repository, npr. e-one-site.
+3. Otpremite sve fajlove iz ovog ZIP-a u koren repository-ja (ukljucujuci .pages.yml i content/site.json).
+4. GitHub: Settings > Pages > Deploy from a branch > main / (root) > Save.
+5. Sajt: https://VAS-USERNAME.github.io/e-one-site/
+6. Otvorite https://app.pagescms.org/ i prijavite se preko GitHub-a.
+7. Izaberite repository e-one-site, otvorite Sadrzaj sajta.
+8. Menjajte naslove, kontakt, dodajte radove i otpremite fotografije; kliknite Save.
+9. Sacekajte da GitHub Pages objavi promene (obicno nekoliko minuta).
+
+Napomene:
+- Administracija je na app.pagescms.org, ne na javnoj adresi sajta.
+- Pravo izmene ima samo GitHub nalog sa dozvolom za repository.
+- Ne unosite privatne podatke koje ne zelite da budu javni: sadrzaj javnog repository-ja je javan.
+- Lokalni prikaz index.html bez web servera ne moze ucitati JSON preko fetch; testirajte objavljen sajt.
+- Besplatni hosting i CMS zavise od aktuelnih uslova platformi.

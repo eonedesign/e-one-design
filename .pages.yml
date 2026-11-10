@@ -1,0 +1,46 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+content:
+  - name: site
+    label: Sadržaj sajta
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: hero
+        label: Glavni naslov
+        type: string
+      - name: subtitle
+        label: Tekst ispod naslova
+        type: text
+      - name: about
+        label: O nama
+        type: text
+      - name: phone
+        label: Telefon
+        type: string
+        required: false
+      - name: email
+        label: E-mail
+        type: string
+        required: false
+      - name: instagram
+        label: Instagram URL
+        type: string
+        required: false
+      - name: projects
+        label: Portfolio radovi
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Naziv rada
+            type: string
+          - name: category
+            label: Kategorija
+            type: string
+          - name: image
+            label: Fotografija
+            type: image
+            required: false
