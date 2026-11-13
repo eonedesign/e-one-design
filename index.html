@@ -227,12 +227,72 @@ body.service-modal-open{overflow:hidden}
 .inquiry-form input[type="file"]{border:0;background:none;padding:8px 0;color:#e8e8e8;font-size:13px}
 .inquiry-form input[type="file"]::file-selector-button{background:#353a3d;border:1px solid #777c7f;border-radius:6px;padding:9px 12px;color:#fff;margin-right:12px;cursor:pointer}
 .inquiry-form .upload-hint{color:#aeb1b3;font-size:11px;font-weight:400;line-height:1.5}
+
+/* Screenshot-inspired composition, retaining original orange/silver E-ONE identity */
+:root{--orange:#EC6E00;--silver:#A6A6A6}
+body{background:#0b1017}
+.wrap{max-width:1600px;padding-inline:clamp(20px,3.25vw,54px)}
+header{background:linear-gradient(100deg,#080b0f,#191d25);border-bottom:1px solid #ffffff12}
+.nav{min-height:79px;justify-content:space-between}
+.brand{flex:0 0 auto}
+.brand img{width:clamp(210px,20.4vw,315px);filter:none}
+.links{gap:clamp(16px,3vw,52px);font-size:15px}
+.links a:first-child:after{bottom:-23px}
+.social-links{gap:16px}
+.hero{min-height:365px;height:clamp(365px,30vw,470px);background:radial-gradient(ellipse at 71% 60%,#65452d 0%,#2b2c2c 39%,#0b111a 79%);overflow:visible}
+.hero:before{opacity:.35}
+.hero-content{min-height:100%;height:100%;justify-content:center;padding-top:32px;padding-bottom:50px}
+.hero h1{font-size:clamp(42px,4.5vw,72px);max-width:600px;letter-spacing:-.045em;line-height:1.04;margin:0 0 23px;text-wrap:balance}
+.hero h1:after{margin:12px 0 0 155px;width:160px}
+.hero p{font-size:clamp(15px,1.35vw,20px);line-height:1.27;max-width:570px}
+.hero .actions{margin-top:26px}
+.hero .btn{min-height:51px}
+.hero-art{right:0;top:50%;width:62%;height:100%;opacity:1;z-index:0;mask-image:linear-gradient(90deg,transparent,#000 21%,#000)}
+.studio-scene{background:radial-gradient(ellipse at 54% 78%,#ec6e0040,transparent 45%),linear-gradient(160deg,#151a21,#393a3b 56%,#131820)}
+.monitor{left:24%;top:10%;width:57%;height:65%;border-radius:12px}
+.monitor-screen span{color:#eee}
+.tablet{left:7%;bottom:11%;width:27%;height:22%}
+.lamp{left:8%;top:1%}
+.section#usluge{position:relative;z-index:2;margin-top:-35px;padding:0 0 20px;background:transparent}
+#usluge .section-head{margin-bottom:15px}
+#usluge h2,#portfolio h2{font-size:clamp(27px,2.65vw,40px)}
+#usluge .grid{grid-template-columns:repeat(10,minmax(0,1fr));gap:10px}
+#usluge .service{min-height:145px;padding:12px 7px 13px;border-radius:12px;background:linear-gradient(150deg,#282a2eec,#12171eea);box-shadow:0 9px 22px #0007;justify-content:center}
+#usluge .service .sym{font-size:32px;margin-bottom:7px;line-height:1}
+#usluge .service h3{font-size:clamp(11px,1.05vw,15px);line-height:1.18}
+#usluge .service p{font-size:10px;margin-top:5px}
+#usluge .service:after{font-size:9px;margin-top:7px}
+#usluge .service:hover{border-color:#ec6e00;transform:translateY(-3px)}
+#portfolio{padding:12px 0 24px;background:transparent}
+#portfolio .section-head{margin-bottom:14px}
+.portfolio-more{font-size:15px;white-space:nowrap}
+.portfolio-more span{color:#ec6e00;font-size:25px;vertical-align:middle;margin-left:7px}
+#portfolio .filterbar{margin-bottom:14px}
+#portfolio .portfolio{grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}
+#portfolio .project{border-radius:6px;transform:skewX(-6deg);border-color:#74777b;box-shadow:0 12px 20px #0006}
+#portfolio .project:hover{transform:skewX(-6deg) translateY(-5px)}
+#portfolio .project img,#portfolio .placeholder{aspect-ratio:1.18;transform:skewX(6deg) scale(1.16);font-size:clamp(17px,2vw,30px)}
+#portfolio .project-info{padding:12px 5px 14px;text-align:center;transform:skewX(6deg);background:#131923d9}
+#portfolio .project-info h3{font-size:clamp(10px,.95vw,14px)}
+#portfolio .project-info p{font-size:11px}
+.benefits-strip{background:linear-gradient(180deg,#121b28,#0b1119);border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff20}
+.benefits-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:105px}
+.benefit{display:flex;align-items:center;gap:12px;min-width:0}
+.benefit span{font-size:38px;line-height:1;color:#d5d8da}
+.benefit p{font-size:14px;line-height:1.28;color:#f0f0f0;margin:0}
+.benefits-cta{flex-shrink:0;font-size:16px;padding:14px 25px}
+.about{padding:38px 0}
+.contact{padding:38px 0}
+@media(max-width:1200px){#usluge .grid{grid-template-columns:repeat(5,minmax(0,1fr))}#portfolio .portfolio{grid-template-columns:repeat(3,minmax(0,1fr))}.benefits-inner{flex-wrap:wrap;padding-block:20px}.benefit{flex:1 1 150px}}
+@media(max-width:800px){.hero{height:auto;min-height:460px}.hero-content{min-height:460px}.hero-art{width:90%;opacity:.3;right:-20%}.hero h1{max-width:650px}#usluge{margin-top:0!important;padding-top:20px!important}#usluge .grid{grid-template-columns:repeat(3,minmax(0,1fr))}#portfolio .portfolio{grid-template-columns:repeat(3,minmax(0,1fr))}.benefits-cta{margin-inline:auto}}
+@media(max-width:620px){.hero{min-height:420px}.hero-content{min-height:420px}.hero h1{font-size:clamp(38px,10vw,53px)}.hero h1:after{margin-left:70px}#usluge .grid{grid-template-columns:repeat(2,minmax(0,1fr))}#portfolio .portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}#portfolio .section-head{align-items:center}.portfolio-more{font-size:11px}.benefits-inner{gap:15px}.benefit{flex:1 1 42%}.benefit span{font-size:30px}.benefit p{font-size:12px}.brand img{width:195px}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="#pocetna"><img src="images/eone-logo.svg" alt="E-ONE Design & Branding"></a><nav class="links"><a href="#pocetna">Početna</a><a href="#usluge">Usluge</a><a href="#portfolio">Portfolio</a><a href="#onama">O nama</a><a href="#kontakt">Kontakt</a></nav><div class="social-links"><a href="#kontakt" aria-label="Instagram">◎</a><a href="#kontakt" aria-label="Facebook">f</a><a href="#portfolio" aria-label="YouTube">▶</a><a href="#portfolio" aria-label="Behance">Bē</a><span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span></div></div></header>
 <section class="hero" id="pocetna"><div class="wrap hero-content"><div class="eyebrow"><span class="eyebrow-line"></span> KREATIVNI STUDIO · DESIGN & BRANDING</div><h1 id="heroTitle"></h1><p id="heroSubtitle"></p><div class="actions"><a class="btn" href="#usluge">Pogledajte usluge →</a><a class="btn ghost" href="#portfolio">▶ &nbsp; Naš portfolio</a></div><div class="hero-bottom"><span>IDENTITET / PRINT / DIGITAL / WRAPPING</span><span>SCROLL TO EXPLORE ↓</span></div></div><div class="hero-art" aria-hidden="true"><span class="hero-ring"></span><span class="hero-monogram">E</span><span class="hero-art-caption">DESIGN<br>WITH IMPACT<span class="orange-dot">.</span></span><div class="studio-scene"><div class="lamp"></div><div class="monitor"><div class="monitor-screen"><span>E-ONE<small>DESIGN &amp; BRANDING</small></span></div></div><div class="monitor-base"></div><div class="tablet">E</div></div></div></section>
 <section class="section" id="usluge"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Šta radimo</div><h2>Naše usluge</h2></div><p>Od prve ideje do završne realizacije.</p></div><div class="grid" id="services"></div></div></section>
 <div class="service-overlay" id="serviceOverlay" hidden><section class="service-dialog" role="dialog" aria-modal="true" aria-labelledby="serviceDialogTitle" tabindex="-1"><button type="button" class="service-close" id="serviceClose" aria-label="Zatvori detalje">×</button><div class="service-switcher"><button type="button" id="servicePrev" aria-label="Prethodna usluga">←</button><span id="serviceCounter"></span><button type="button" id="serviceNext" aria-label="Sledeća usluga">→</button></div><div class="service-kicker">E-ONE · NAŠE USLUGE</div><h2 id="serviceDialogTitle"></h2><p class="service-lead" id="serviceDialogLead"></p><p class="service-description" id="serviceDialogDescription"></p><div class="service-gallery" id="serviceDialogGallery"></div><div class="inquiry-panel"><h3>Pošaljite upit za ovu uslugu</h3><form class="inquiry-form" id="serviceInquiry"><input type="hidden" name="_subject" value=""><input type="hidden" name="_captcha" value="true"><input type="hidden" name="_template" value="table"><label>Vrsta usluge<select name="category" required></select></label><div class="form-two"><label>Ime i prezime<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Vaše ime"></label><label>E-mail adresa<input name="email" type="email" autocomplete="email" required placeholder="vas@email.com"></label></div><label>Telefon (opciono)<input name="phone" type="tel" autocomplete="tel" placeholder="+381..."></label><label>Opis ideje i želje<textarea name="message" required rows="5" maxlength="5000" placeholder="Opišite ideju, željeni stil, boje, dimenzije, tekst koji treba da stoji na dizajnu, rok i sve druge detalje koji su vam važni..."></textarea></label><p class="form-help">Navedite poželjne boje, stil (moderan, minimalistički, elegantan...), format ili dimenzije, primer koji vam se dopada i druge smernice za dizajn.</p><label class="upload-label">Slika ideje ili primer dizajna (opciono)<input name="attachment" type="file" accept="image/jpeg,image/png,image/webp,image/gif,application/pdf,.jpg,.jpeg,.png,.webp,.gif,.pdf"><span class="upload-hint">Dodajte JPG, PNG, WEBP, GIF ili PDF, do 10 MB. Ako imate više primera, možete ih opisati u poruci.</span></label><label class="form-consent"><input type="checkbox" required name="consent" value="Da"> Saglasan/saglasna sam da se podaci koriste isključivo za odgovor na moj upit.</label><div class="form-actions"><button type="submit" class="btn">Pošaljite upit →</button><span class="form-status" role="status" aria-live="polite"></span></div></form></div></section></div>
-<section class="section" id="portfolio"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Naš rad</div><h2>Izabrani radovi</h2></div><p>Svaki projekat je priča za sebe.</p></div><div class="filterbar" id="filters"></div><div class="portfolio" id="projects"></div><p class="portfolio-note">Portfolio je spreman za tvoje originalne fotografije — dodaju se kroz administraciju.</p></div></section>
+<section class="section" id="portfolio"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Naš rad</div><h2>Izabrani radovi</h2></div><a class="portfolio-more" href="#projects">Pogledajte ceo portfolio <span>→</span></a></div><div class="filterbar" id="filters"></div><div class="portfolio" id="projects"></div><p class="portfolio-note">Portfolio je spreman za tvoje originalne fotografije — dodaju se kroz administraciju.</p></div></section>
+<section class="benefits-strip"><div class="wrap benefits-inner"><div class="benefit"><span>◇</span><p>Kreativnost<br>i iskustvo</p></div><div class="benefit"><span>◎</span><p>Kompletna<br>vizuelna rešenja</p></div><div class="benefit"><span>▤</span><p>Priprema<br>za štampu</p></div><div class="benefit"><span>▣</span><p>Digitalni i<br>štampani mediji</p></div><div class="benefit"><span>↗</span><p>Od ideje<br>do realizacije</p></div><a class="btn benefits-cta" href="#kontakt">Kontaktirajte nas →</a></div></section>
 <section class="section about" id="onama"><div class="wrap about-cols"><div><div class="eyebrow">O nama</div><h2>Od prve skice do <span class="accent">prepoznatljivog brenda.</span></h2><p id="aboutText"></p></div><div><div class="feature">Kreativan i individualan pristup</div><div class="feature">Vizuelni identitet i brendiranje</div><div class="feature">Priprema za profesionalnu štampu</div><div class="feature">Dizajn za digitalne i štampane medije</div><div class="feature">Od ideje do realizacije</div></div></div></section>
 <section class="section contact" id="kontakt"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Hajde da sarađujemo</div><h2>Imate ideju?<br><span class="accent">Dajmo joj oblik.</span></h2><p>Pišite nam ili nas pozovite za ponudu.</p><div id="contactDetails"></div></div><div class="contact-form-wrap"><h3>Pošaljite nam upit</h3><form class="inquiry-form" id="generalInquiry"><input type="hidden" name="_subject" value=""><label>Vrsta usluge<select name="category" required></select></label><div class="form-two"><label>Ime i prezime<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Vaše ime"></label><label>E-mail adresa<input name="email" type="email" autocomplete="email" required placeholder="vas@email.com"></label></div><label>Telefon (opciono)<input name="phone" type="tel" autocomplete="tel" placeholder="+381..."></label><label>Opis ideje i želje<textarea name="message" required rows="5" maxlength="5000" placeholder="Opišite ideju, željeni stil, boje, dimenzije, tekst koji treba da stoji na dizajnu, rok i sve druge detalje koji su vam važni..."></textarea></label><p class="form-help">Navedite poželjne boje, stil (moderan, minimalistički, elegantan...), format ili dimenzije, primer koji vam se dopada i druge smernice za dizajn.</p><label class="upload-label">Slika ideje ili primer dizajna (opciono)<input name="attachment" type="file" accept="image/jpeg,image/png,image/webp,image/gif,application/pdf,.jpg,.jpeg,.png,.webp,.gif,.pdf"><span class="upload-hint">Dodajte JPG, PNG, WEBP, GIF ili PDF, do 10 MB. Ako imate više primera, možete ih opisati u poruci.</span></label><label class="form-consent"><input type="checkbox" required name="consent" value="Da"> Saglasan/saglasna sam da se podaci koriste isključivo za odgovor na moj upit.</label><div class="form-actions"><button type="submit" class="btn">Pošaljite upit →</button><span class="form-status" role="status" aria-live="polite"></span></div></form></div></div></div></section><footer><div class="wrap foot"><span>© <span id="year"></span> E-ONE Design & Branding</span><span>Grafički dizajn • Brendiranje • Auto grafika</span></div></footer>
 
